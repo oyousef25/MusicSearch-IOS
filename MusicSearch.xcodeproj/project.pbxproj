@@ -17,6 +17,8 @@
 		ABB0260726FFAA230038C304 /* MusicSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB0260626FFAA230038C304 /* MusicSearchUITests.swift */; };
 		ABB0260926FFAA230038C304 /* MusicSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB0260826FFAA230038C304 /* MusicSearchUITestsLaunchTests.swift */; };
 		ABB0261B26FFC3390038C304 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB0261A26FFC3390038C304 /* Album.swift */; };
+		ABB0261D26FFD9080038C304 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB0261C26FFD9080038C304 /* AlbumTableViewCell.swift */; };
+		ABB0262126FFDA1F0038C304 /* AlbumsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB0262026FFDA1F0038C304 /* AlbumsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		ABB0260626FFAA230038C304 /* MusicSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchUITests.swift; sourceTree = "<group>"; };
 		ABB0260826FFAA230038C304 /* MusicSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ABB0261A26FFC3390038C304 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		ABB0261C26FFD9080038C304 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		ABB0262026FFDA1F0038C304 /* AlbumsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 		ABB0261726FFBFA30038C304 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				ABB0261C26FFD9080038C304 /* AlbumTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				ABB025E926FFAA1F0038C304 /* ViewController.swift */,
+				ABB0262026FFDA1F0038C304 /* AlbumsTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -301,6 +307,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB0261D26FFD9080038C304 /* AlbumTableViewCell.swift in Sources */,
+				ABB0262126FFDA1F0038C304 /* AlbumsTableViewController.swift in Sources */,
 				ABB025EA26FFAA1F0038C304 /* ViewController.swift in Sources */,
 				ABB025E626FFAA1F0038C304 /* AppDelegate.swift in Sources */,
 				ABB025E826FFAA1F0038C304 /* SceneDelegate.swift in Sources */,
