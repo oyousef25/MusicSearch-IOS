@@ -16,6 +16,7 @@
 		ABB025FD26FFAA230038C304 /* MusicSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB025FC26FFAA230038C304 /* MusicSearchTests.swift */; };
 		ABB0260726FFAA230038C304 /* MusicSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB0260626FFAA230038C304 /* MusicSearchUITests.swift */; };
 		ABB0260926FFAA230038C304 /* MusicSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB0260826FFAA230038C304 /* MusicSearchUITestsLaunchTests.swift */; };
+		ABB0261B26FFC3390038C304 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB0261A26FFC3390038C304 /* Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		ABB0260226FFAA230038C304 /* MusicSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB0260626FFAA230038C304 /* MusicSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchUITests.swift; sourceTree = "<group>"; };
 		ABB0260826FFAA230038C304 /* MusicSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ABB0261A26FFC3390038C304 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +101,12 @@
 		ABB025E426FFAA1F0038C304 /* MusicSearch */ = {
 			isa = PBXGroup;
 			children = (
-				ABB025E526FFAA1F0038C304 /* AppDelegate.swift */,
-				ABB025E726FFAA1F0038C304 /* SceneDelegate.swift */,
-				ABB025E926FFAA1F0038C304 /* ViewController.swift */,
-				ABB025EB26FFAA1F0038C304 /* Main.storyboard */,
+				ABB0261926FFBFCE0038C304 /* Storyboards */,
+				ABB0261826FFBFB50038C304 /* ViewControllers */,
+				ABB0261726FFBFA30038C304 /* TableViewCell */,
+				ABB0261626FFBF960038C304 /* Delegates */,
+				ABB0261526FFBF8D0038C304 /* Models */,
 				ABB025EE26FFAA220038C304 /* Assets.xcassets */,
-				ABB025F026FFAA220038C304 /* LaunchScreen.storyboard */,
 				ABB025F326FFAA220038C304 /* Info.plist */,
 			);
 			path = MusicSearch;
@@ -125,6 +127,47 @@
 				ABB0260826FFAA230038C304 /* MusicSearchUITestsLaunchTests.swift */,
 			);
 			path = MusicSearchUITests;
+			sourceTree = "<group>";
+		};
+		ABB0261526FFBF8D0038C304 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ABB0261A26FFC3390038C304 /* Album.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ABB0261626FFBF960038C304 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				ABB025E526FFAA1F0038C304 /* AppDelegate.swift */,
+				ABB025E726FFAA1F0038C304 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		ABB0261726FFBFA30038C304 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		ABB0261826FFBFB50038C304 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ABB025E926FFAA1F0038C304 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		ABB0261926FFBFCE0038C304 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				ABB025EB26FFAA1F0038C304 /* Main.storyboard */,
+				ABB025F026FFAA220038C304 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +304,7 @@
 				ABB025EA26FFAA1F0038C304 /* ViewController.swift in Sources */,
 				ABB025E626FFAA1F0038C304 /* AppDelegate.swift in Sources */,
 				ABB025E826FFAA1F0038C304 /* SceneDelegate.swift in Sources */,
+				ABB0261B26FFC3390038C304 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
