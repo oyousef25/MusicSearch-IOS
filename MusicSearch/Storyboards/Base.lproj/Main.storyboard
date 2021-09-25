@@ -28,7 +28,7 @@
                                 <rect key="frame" x="10" y="132" width="394" height="730"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="albumCell" rowHeight="240" id="eHN-90-c0U">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="albumCell" rowHeight="240" id="eHN-90-c0U" customClass="AlbumTableViewCell" customModule="MusicSearch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="394" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eHN-90-c0U" id="2bd-EX-xdd">
@@ -142,8 +142,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Music Search" id="mg5-Eo-8EE">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.clockwise" catalog="system" id="w1R-GO-cJv"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.circle" catalog="system" id="KZW-ds-gKG"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.clockwise" catalog="system" id="w1R-GO-cJv">
+                            <connections>
+                                <action selector="resetButton:" destination="BYZ-38-t0r" id="VV7-tQ-AqV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.circle" catalog="system" id="KZW-ds-gKG">
+                            <connections>
+                                <action selector="profilePageButton:" destination="BYZ-38-t0r" id="ekZ-3b-nvj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
             </objects>
