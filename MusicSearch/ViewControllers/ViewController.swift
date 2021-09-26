@@ -12,8 +12,6 @@ class ViewController: UIViewController {
     var albumResults = [Album]()
     
     
-    
-    
     //MARK: OUTLETS
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -32,6 +30,7 @@ class ViewController: UIViewController {
         
         //Setting up the delegate for the searchTextField
         searchBar.delegate = self
+        
     }
 
     //MARK: Actions
@@ -43,14 +42,14 @@ class ViewController: UIViewController {
         //Reset the search bar
         searchBar.text = ""
         
-        
+        //Reset the tableView
+        albumResults = [];
+        tableView.reloadData()
     }
-    
-    
 }
 
-//MARK: Extensions
 
+//MARK: Extensions
 
 //MARK: TableView Delegate
 extension ViewController: UITableViewDelegate{
@@ -61,7 +60,7 @@ extension ViewController: UITableViewDelegate{
         /*
             Create an alert controller to display the album name that was added to the cart
          */
-        let ac = UIAlertController(title: "\(selectedAlbum.collectionName) added to cart!", message: nil, preferredStyle: .alert)
+        let ac = UIAlertController(title: "\(String(describing: selectedAlbum.collectionName)) added to cart!", message: nil, preferredStyle: .alert)
         
         ac.addAction(UIAlertAction(title: "OK", style: .default))
         present(ac, animated: true)
@@ -72,17 +71,21 @@ extension ViewController: UITableViewDelegate{
 //MARK: TableView Datasource
 extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(albumResults)
         return albumResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath) as! AlbumTableViewCell
         
-//        cell.cellBackground.backgroundColor = UIColor(named: "CellBackground")
-//        cell.cellBackground.layer.cornerRadius = 5.0
+        cell.cellBackground.layer.cornerRadius = 5.0
+        cell.albumImage.layer.cornerRadius = 10
         
-//        let album = albumResults[indexPath.row]
-//        cell.setUpCell(using: album)
+        let album = albumResults[indexPath.row]
+        cell.setUpCell(using: album)
+        
+        
+
         
         return cell
     }
@@ -123,7 +126,7 @@ extension ViewController: UISearchBarDelegate{
         guard let cleanURL = album.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { fatalError("Can't create a valid url") }
         
         var urlString = "https://itunes.apple.com/search?"
-        urlString = urlString.appending("term+\(cleanURL)")
+        urlString = urlString.appending("term=\(cleanURL)")
         urlString = urlString.appending("&entity=musicTrack")
         print(urlString)
         
