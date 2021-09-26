@@ -150,12 +150,33 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.circle" catalog="system" id="KZW-ds-gKG">
                             <connections>
                                 <action selector="profilePageButton:" destination="BYZ-38-t0r" id="ekZ-3b-nvj"/>
+                                <segue destination="6Zz-ua-9i5" kind="show" id="yar-H3-rpZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="kyg-Jg-DMA" id="cZL-y7-TFY"/>
+                        <outlet property="tableView" destination="N2X-Sa-rrc" id="kvp-E9-PUo"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="83.705357142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="m0j-n8-Nu4">
+            <objects>
+                <viewController id="6Zz-ua-9i5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kNF-tX-tBh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CWT-Tu-Yzd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Nj-S3-0fy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WCl-Io-dVE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1690" y="84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pNF-Sg-Hk0">
