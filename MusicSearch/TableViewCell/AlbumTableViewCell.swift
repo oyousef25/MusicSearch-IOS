@@ -44,16 +44,17 @@ class AlbumTableViewCell: UITableViewCell{
         albumTitle.text = album.collectionName
         trackName.text = album.trackName
         artistName.text = album.artistName
-        //trackCost.text = Double(album.trackPrice) ?? 0.00
+        //Unwrapping the value of the double and turning it into a string
+        trackCost.text = "$\(String(album.trackPrice ?? 0))"
         albumGenre.text = album.wrapperType
         
         //set a default image in case there is no poster
         albumImage.image = UIImage(named: "sample")
         
         //get the poster path string
-        guard let posterPath = album.collectionViewURL else { return }
+        guard let posterPath = album.artworkUrl100 else { return }
         
-        //TODO: build a url to fetch the post and load the image
+        //build a url to fetch the album and load the image
         if let url = buildImageUrl(for: posterPath){
             print(url)
             loadPoster(url: url, forCell: self)

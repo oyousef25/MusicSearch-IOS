@@ -60,7 +60,7 @@ extension ViewController: UITableViewDelegate{
         /*
             Create an alert controller to display the album name that was added to the cart
          */
-        let ac = UIAlertController(title: "\(String(describing: selectedAlbum.collectionName)) added to cart!", message: nil, preferredStyle: .alert)
+        let ac = UIAlertController(title: "\(String(describing: selectedAlbum.collectionName!)) added to cart!", message: nil, preferredStyle: .alert)
         
         ac.addAction(UIAlertAction(title: "OK", style: .default))
         present(ac, animated: true)

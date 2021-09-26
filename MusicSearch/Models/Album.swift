@@ -7,10 +7,13 @@
 
 import Foundation
 
+
+//All albums
 struct Albums: Codable{
     var results: [Album]
 }
 
+//Album object to create a new instance of the object
 struct Album: Codable{
     var collectionName: String?
     var trackName: String?
@@ -18,5 +21,5 @@ struct Album: Codable{
     var trackPrice: Double?
     var wrapperType: String?
     var trackExplicitness: String?
-    var collectionViewURL: String?
+    var artworkUrl100: String?
 }
