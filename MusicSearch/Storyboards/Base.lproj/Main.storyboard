@@ -97,8 +97,8 @@
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bH1-tg-D40">
-                                                            <rect key="frame" x="26" y="12" width="31" height="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" preservesSuperviewLayoutMargins="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bH1-tg-D40">
+                                                            <rect key="frame" x="26" y="12" width="31" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -125,6 +125,15 @@
                                                 <constraint firstItem="Z0F-tv-hhi" firstAttribute="leading" secondItem="2bd-EX-xdd" secondAttribute="leading" id="ptN-ML-hMP"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumGenre" destination="bH1-tg-D40" id="HBB-g5-MvD"/>
+                                            <outlet property="albumImage" destination="icJ-g2-Kd1" id="rWA-Ub-Yjj"/>
+                                            <outlet property="albumTitle" destination="sIQ-nb-PmS" id="lfJ-IF-N8u"/>
+                                            <outlet property="artistName" destination="JEL-EW-duG" id="zu4-lg-9Gj"/>
+                                            <outlet property="cellBackground" destination="Z0F-tv-hhi" id="KvV-rh-PA1"/>
+                                            <outlet property="trackCost" destination="hhs-P8-ySD" id="Etn-Vb-OIL"/>
+                                            <outlet property="trackName" destination="Xz9-au-dop" id="PT9-c9-uA1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
